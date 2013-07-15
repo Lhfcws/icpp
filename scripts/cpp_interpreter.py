@@ -10,7 +10,7 @@
 import commands
 import os
 
-path = '/home/lhfcws/coding/projects/cpp_interpreter/scripts/'
+path = os.path.split(os.path.realpath(__file__))[0] + '/'
 
 class CPPInterpreter(object):
     def __init__(self):
@@ -20,7 +20,7 @@ class CPPInterpreter(object):
         self.codes = [self.pre_codes]               # normal codes
         self.src = path + '../temp_src/src.cpp'            # temp source code path
         self.bin = path + '../temp_src/exe'                # temp binary file path
-        self.help_src = path + '../help.txt'               # Help text
+        self.help_src = path + '../help.md'               # Help text
         self.compile_cmd = 'g++ ' + self.src + ' -o ' + self.bin    # Compile command in shell
 
         # Commands Dictionary

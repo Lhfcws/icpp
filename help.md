@@ -4,9 +4,10 @@ Commands begin with #, Example:
 > #help
 
 Command list:
-help / h    -> Print this help information.
-run / r     -> Compile and Run your source code immediatelly.
-show / s    -> Show your entire codes.
-delete / d  -> Delete the last line of the codes.
++ help / h    -> Print this help information.
++ run / r     -> Compile and Run your source code immediatelly.
++ show / s    -> Show your entire codes.
++ delete / d  -> Delete the last line of the codes.
++ exit / e    -> Exit program.
 
 
