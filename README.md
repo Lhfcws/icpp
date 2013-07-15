@@ -1,11 +1,13 @@
 # Easy CPP Interpreter (icpp)
 
-> author: Lhfcws Wu (宸风)
-> version: 0.0.1
-> create-time: 2013-07-15
-> last-modified-time: 2013-07-15
+> author: Lhfcws Wu (宸风)  
+> version: 0.0.1  
+> create-time: 2013-07-15  
+> last-modified-time: 2013-07-15  
 
 First day of my formal internship is so free and boring, and I have to learn C-language deeply. So I wrote this simple interpreter in the afternoon.
+
+This is not a compiler, it is just a interpreter shell of gcc/g++.
 
 ## Installation
 
