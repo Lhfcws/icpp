@@ -9,7 +9,7 @@
 + Divided into C++ language mode(default) and C language mode.
 + Main Wrapper mode added.  
     > #main  
-    > cout << "Thess codes is directly runnable." << endl;  
+    > cout << "These codes are directly runnable." << endl;  
     > #r  
 
 
