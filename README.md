@@ -8,9 +8,9 @@
 #### v0.0.2 Change log:
 + Divided into C++ language mode(default) and C language mode.
 + Main Wrapper mode added.  
-    > #main
-    > cout << "Thess codes is directly runnable." << endl;
-    > #r
+    > #main  
+    > cout << "Thess codes is directly runnable." << endl;  
+    > #r  
 
 
 ###
