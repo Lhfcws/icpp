@@ -16,12 +16,21 @@ class CPPInterpreter(object):
     def __init__(self):
         self.nexit = True                   # Exit flag
         self.has_main = False               # auto generate main flag
-        self.pre_codes = '#include "headers.h"\n'   # Common headers
-        self.codes = [self.pre_codes]               # normal codes
-        self.src = path + '../temp_src/src.cpp'            # temp source code path
         self.bin = path + '../temp_src/exe'                # temp binary file path
+
+        self.cpp_pre_codes = '#include "cpp_headers.h"\n'   # Common headers
+        self.c_pre_codes = '#include "c_headers.h"\n'
+        self.cpp_src = path + '../temp_src/src.cpp'            # temp source code path
+        self.c_src = path + '../temp_src/src.c'            # temp source code path
+        self.cpp_compile_cmd = 'g++ ' + self.cpp_src + ' -o ' + self.bin    # Compile command in shell
+        self.c_compile_cmd = 'gcc ' + self.c_src + ' -o ' + self.bin    # Compile command in shell
+
+        self.pre_codes = self.cpp_pre_codes
+        self.src = self.cpp_src
+        self.compile_cmd = self.cpp_compile_cmd
+
+        self.codes = [self.pre_codes]               # normal codes
         self.help_src = path + '../help.md'               # Help text
-        self.compile_cmd = 'g++ ' + self.src + ' -o ' + self.bin    # Compile command in shell
 
         # Commands Dictionary
         self.cmd_dict = {
@@ -45,6 +54,10 @@ class CPPInterpreter(object):
                 'e': 'exit',
                 # main
                 'main': 'main',
+                # C-mode
+                'C': 'c_language',
+                # CPP-mode
+                'cpp': 'cpp_language',
         }
     
     # Get line
@@ -127,3 +140,15 @@ class CPPInterpreter(object):
     def __main(self):
         self.processline('int main(int args, char** argv) {')
         self.has_main = True
+
+    def __c_language(self):
+        self.pre_codes = self.c_pre_codes
+        self.src = self.c_src
+        self.compile_cmd = self.c_compile_cmd
+        self.codes[0] = self.pre_codes
+
+    def __cpp_language(self):
+        self.pre_codes = self.cpp_pre_codes
+        self.src = self.cpp_src
+        self.compile_cmd = self.cpp_compile_cmd
+        self.codes[0] = self.pre_codes

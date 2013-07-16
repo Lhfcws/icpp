@@ -9,5 +9,7 @@ Command list:
 + show / s    -> Show your entire codes.
 + delete / d  -> Delete the last line of the codes.
 + exit / e    -> Exit program.
-
++ C           -> C language mode.
++ cpp         -> C++ language mode.
++ main        -> Auto main function wrapper mode.
 
