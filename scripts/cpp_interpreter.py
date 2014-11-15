@@ -9,6 +9,7 @@
 
 import commands
 import os
+import readline
 
 path = os.path.split(os.path.realpath(__file__))[0] + '/'
 
@@ -62,13 +63,13 @@ class CPPInterpreter(object):
     
     # Get line
     def getline(self):
-        codeline = raw_input('> ')
+        codeline = repr(raw_input('> '))
         self.processline(codeline)
 
     # Parse line
     def processline(self, codeline):
         codeline = codeline.strip()
-        if codeline[0] == '#':
+        if codeline[0] == '?':
             self.execute(codeline[1:])
         else:
             self.codes.append(codeline + '\n')

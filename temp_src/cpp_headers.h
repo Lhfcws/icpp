@@ -14,5 +14,6 @@
 #include <set>
 #include <deque>
 #include <string>
+#include <algorithm>
 
 using namespace std;
