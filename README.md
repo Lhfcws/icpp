@@ -3,7 +3,7 @@
 > author: Lhfcws Wu (宸风)  
 > version: 0.0.2  
 > create-time: 2013-07-15  
-> last-modified-time: 2013-07-16  
+
 
 #### v0.0.2 Change log:
 + Divided into C++ language mode(default) and C language mode.
@@ -19,11 +19,11 @@ First day of my formal internship is so free and boring, and I have to learn C-l
 This is not a compiler, it is just a interpreter shell of gcc/g++.  
 
 ## Installation
-I haven't add python setup utils into the project, so just `python main.py` in the scripts.  
-Or if you want a better experience, add the following alias in `~/.bashrc`:  
+I haven't add python setup utils into the project, so just `python icpp.py` in the scripts.  
+Or if you want a better experience, add the following alias in `~/.profile`:  
 
-    alias icpp='python /path/to/main.py'
-    source ~/.bashrc
+    alias icpp='python /path/to/icpp.py'
+    source ~/.profile
 
 Then you can use `icpp` in anywhere in your shell.
 
